@@ -1,0 +1,37 @@
+Crime Tips
+(I'll come up with a better name for this)
+
+Wireframes, ERD in planning folder
+
+The idea behind this news app is to create a space where reporters, public figures and residents
+can help each other become better informed about crime in their city.
+
+Users: Reporters; Public Figures: Community Leaders, Police Officials, Local Politicos; Residents
+
+Residents
+
+1. As a user, I want to select geographical regions in the city to view a list
+of incidents in that area.
+2. ...I want to be able to view a specific incident, add comments about what I know
+about it and questions I have.
+3. ...when I observe or hear about an incident that I haven't seen reported, I'd like to write a post
+about it to share what I know.
+4. ...I want to be able to edit and delete my posts and comments.
+5. ...I don't want to have to share too much personal information such as my real name
+and other details because of safety concerns.
+6. ...I want reporters and public figure with verified accounts to comment by confirming
+or denying what's in posts and comments, saying what hasn't been proven, etc.
+
+Public Figures
+
+1-4 same as above
+4. As a user, I want to be able to post and comment with a verified account because
+it's my job to operate in the public sphere and I have access to privileged information
+that I can use to better serve my constituents.
+
+Reporters
+
+1-4 same as above
+4. As a user, I want to keep the public informed with verified information about incidents.
+5. ...I want a page that sets ground rules for using this app.
+6. ...I want to delete any comments or posts that do not adhere to the standards.
