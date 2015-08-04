@@ -1,0 +1,8 @@
+<h2><%= @region.name %></h2>
+
+<h3>Incidents <%= link_to "(+)", new_region_incident_path(@region) %></h3>
+<ul>
+  <% @region.incidents.each do |incident| %>
+  <%= link_to "#{incident.title}", region_incident_path(@region, incident) %>
+  <% end %>
+</ul>

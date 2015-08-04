@@ -1,0 +1,14 @@
+<%= form_for ([@region, @incident]) do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.submit %>
+
+<% end %>

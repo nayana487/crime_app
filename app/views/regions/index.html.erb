@@ -1,0 +1,11 @@
+<h2>Regions</h2>
+
+<ul>
+  <% @regions.each do |region| %>
+    <li>
+      <a href="/regions/<%= region.id %>">
+        <%= region.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
