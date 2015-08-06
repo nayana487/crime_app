@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
     root to: "regions#index"
-    resources :regions do
-      resources :incidents do
+    resources :regions, shallow: true do
+      resources :incidents, shallow: true do
         resources :comments
       end
     end

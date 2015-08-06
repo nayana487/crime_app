@@ -11,5 +11,3 @@ Incident.destroy_all
 Comment.destroy_all
 
 Region.create([{name: 'North'}, {name: 'South'}, {name: 'East'}, {name: 'West'}])
-Incident.create(name: 'nayana487', title: 'Shots fired in Charles Village', content: "I heard
-gunshots in Charles Village")
