@@ -7,7 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-Baltimore Crime
+<h1>Baltimore Crime</h1>
+<nav>
+  <a href="/sign_in">Sign in</a>
+  <a href="/sign_up">Sign up</a>
+  <a href="/sign_out">Sign out</a>
+  <h2><%= flash[:notice] %>
+</nav>
 <%= yield %>
 
 </body>
