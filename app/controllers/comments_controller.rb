@@ -7,8 +7,7 @@ class CommentsController < ApplicationController
 
   def create
     @incident = Incident.find(params[:incident_id])
-    @incident.comments.create( comment_params )
-  #  @region = Comment.create!(comment_params.merge(incident: @incident))
+    @comment = @incident.comments.create(comment_params.merge(user_id: session[:user]["id"]))
     redirect_to incident_path(@incident)
   end
 

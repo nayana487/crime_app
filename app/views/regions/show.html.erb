@@ -3,7 +3,11 @@
 <h3>Incidents <%= link_to "(+)", new_region_incident_path(@region) %></h3>
 <ul>
   <% @region.incidents.each do |incident| %>
+  <li>
   <%= link_to "#{incident.title}", incident_path(incident) %>
+  </li>
+  <% if incident.user_id==session[:user]["id"] %>
   <%= button_to "delete", incident, :method => :delete %>
+  <% end %>
   <% end %>
 </ul>

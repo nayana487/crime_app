@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806174945) do
+ActiveRecord::Schema.define(version: 20150807002314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,11 @@ ActiveRecord::Schema.define(version: 20150806174945) do
     t.string   "content"
     t.datetime "created_at"
     t.integer  "incident_id"
+    t.integer  "user_id"
   end
 
   add_index "comments", ["incident_id"], name: "index_comments_on_incident_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "incidents", force: :cascade do |t|
     t.string   "name"
@@ -31,9 +33,11 @@ ActiveRecord::Schema.define(version: 20150806174945) do
     t.string   "title"
     t.datetime "created_at"
     t.integer  "region_id"
+    t.integer  "user_id"
   end
 
   add_index "incidents", ["region_id"], name: "index_incidents_on_region_id", using: :btree
+  add_index "incidents", ["user_id"], name: "index_incidents_on_user_id", using: :btree
 
   create_table "regions", force: :cascade do |t|
     t.string "name"
@@ -45,5 +49,7 @@ ActiveRecord::Schema.define(version: 20150806174945) do
   end
 
   add_foreign_key "comments", "incidents"
+  add_foreign_key "comments", "users"
   add_foreign_key "incidents", "regions"
+  add_foreign_key "incidents", "users"
 end

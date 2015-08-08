@@ -6,8 +6,7 @@ class IncidentsController < ApplicationController
 
   def create
     @region = Region.find(params[:region_id])
-    @region.incidents.create(incident_params) 
-    #@incident = Incident.create!(incident_params.merge(region: @region))
+    @incident = @region.incidents.create(incident_params.merge(user_id: session[:user]["id"]))
     redirect_to region_path(@region)
   end
 
@@ -16,15 +15,13 @@ class IncidentsController < ApplicationController
   end
 
   def edit
-    @region = Region.find(params[:region_id])
     @incident = Incident.find(params[:id])
   end
 
   def update
-    @region = Region.find(params[:region_id])
     @incident = Incident.find(params[:id])
     @incident.update(incident_params)
-    redirect_to region_incident_path(@region, @incident)
+    redirect_to incident_path(@incident)
   end
 
   def destroy

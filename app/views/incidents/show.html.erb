@@ -1,12 +1,18 @@
-<h2><%= @incident.title %> <a href="<%= @incident.id %>/edit">(edit)</a></h2>
+<h2><%= @incident.title %>
+  <% if @incident.user_id==session[:user]["id"] %>
+  <a href="<%= @incident.id %>/edit">(edit)</a></h2>
+  <% end %>
 <h4><%= @incident.name %></h4>
 <h4><%= @incident.content %></h4>
+
 
 <h3>Comments <%= link_to "(+)", new_incident_comment_path(@incident) %></h3>
 <ul>
   <% @incident.comments.each do |comment| %>
       <p><%= comment.content %></p>
       <h4> <%= comment.name %></h4>
+      <% if comment.user_id==session[:user]["id"] %>
       <%= button_to "delete", comment, :method => :delete %>
+      <% end %>
   <% end %>
 </ul>

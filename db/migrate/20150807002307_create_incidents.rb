@@ -6,6 +6,7 @@ class CreateIncidents < ActiveRecord::Migration
       t.string :title
       t.datetime :created_at
       t.references :region, index: true, foreign_key: true
+      t.references :user, index: true, foreign_key: true
     end
   end
 end
