@@ -1,5 +1,5 @@
 <h2><%= @incident.title %>
-  <% if @incident.user_id==session[:user]["id"] %>
+  <% if @incident.user_id==session[:user]["id"] || session[:user]["admin"]%>
   <a href="<%= @incident.id %>/edit">(edit)</a></h2>
   <% end %>
 <h4><%= @incident.name %></h4>
@@ -11,7 +11,7 @@
   <% @incident.comments.each do |comment| %>
       <p><%= comment.content %></p>
       <h4> <%= comment.name %></h4>
-      <% if comment.user_id==session[:user]["id"] %>
+      <% if comment.user_id==session[:user]["id"] || session[:user]["admin"]%>
       <%= button_to "delete", comment, :method => :delete %>
       <% end %>
   <% end %>

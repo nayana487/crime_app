@@ -1,2 +1,11 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+* {
+  box-sizing: border-box;
+}
+
+#header {
+  background-color: red;
+}
+
+#navigation {
+  background-color: #DAA520;
+}

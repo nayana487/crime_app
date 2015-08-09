@@ -6,7 +6,7 @@
   <li>
   <%= link_to "#{incident.title}", incident_path(incident) %>
   </li>
-  <% if incident.user_id==session[:user]["id"] %>
+  <% if incident.user_id==session[:user]["id"] || session[:user]["admin"]%>
   <%= button_to "delete", incident, :method => :delete %>
   <% end %>
   <% end %>

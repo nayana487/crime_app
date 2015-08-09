@@ -6,7 +6,7 @@ class IncidentsController < ApplicationController
 
   def create
     @region = Region.find(params[:region_id])
-    @incident = @region.incidents.create(incident_params.merge(user_id: session[:user]["id"]))
+    @incident = @region.incidents.create(incident_params.merge(user_id: session[:user]["id"]).merge(name: session[:user]["username"]))
     redirect_to region_path(@region)
   end
 
@@ -32,7 +32,7 @@ class IncidentsController < ApplicationController
   end
 
   def incident_params
-  params.require(:incident).permit(:title, :name, :content)
+  params.require(:incident).permit(:title, :content)
   end
 
 end

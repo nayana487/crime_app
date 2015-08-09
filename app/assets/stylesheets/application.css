@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 * {
   box-sizing: border-box;
 }
@@ -9,8 +12,6 @@
 #navigation {
   background-color: #DAA520;
 }
-
-
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

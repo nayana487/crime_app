@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
 
   def create
     @incident = Incident.find(params[:incident_id])
-    @comment = @incident.comments.create(comment_params.merge(user_id: session[:user]["id"]))
+    @comment = @incident.comments.create(comment_params.merge(user_id: session[:user]["id"]).merge(name: session[:user]["username"]))
     redirect_to incident_path(@incident)
   end
 
@@ -23,6 +23,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-  params.require(:comment).permit(:name, :content)
+  params.require(:comment).permit(:content)
   end
 end
