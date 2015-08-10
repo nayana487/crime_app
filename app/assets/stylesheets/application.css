@@ -1,6 +1,16 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+}
 
-* {
-  box-sizing: border-box;
+a{
+  text-decoration: none;
+  color: #DAA520;
+}
+a:hover {
+  color: red;
 }
 
 #header {
@@ -8,6 +18,9 @@
   font-family: 'Rock Salt', cursive;
   text-align: center;
   font-size: 20px;
+  width: 100%;
+  background-color: black;
+
 }
 
 #navigation {
