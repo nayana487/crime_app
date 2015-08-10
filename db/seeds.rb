@@ -11,4 +11,4 @@ Incident.destroy_all
 Comment.destroy_all
 
 Region.create([{name: 'North'}, {name: 'South'}, {name: 'East'}, {name: 'West'}])
-User.create(username: 'admin', password_digest: BCrypt::Password.create('root'), admin: 'true')
+User.create(username: 'reporter', password_digest: BCrypt::Password.create('admin'), admin: 'true')
