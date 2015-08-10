@@ -1,11 +1,16 @@
-<h2>Regions</h2>
+<h2 id ="regions">Select a Region:</h2>
 
-<ul>
+
   <% @regions.each do |region| %>
-    <li>
+    <li class = "region_links">
       <a href="/regions/<%= region.id %>">
         <%= region.name %>
       </a>
     </li>
   <% end %>
-</ul>
+
+<p id ="intro">Charm City Blotter is a space where residents and the local media can keep each
+  other informed about suspected criminal activity in the area. Members of the public can write posts
+  and comments, but verified reporters will confirm whether or not the accounts are accurate. Reporters
+  also maintain the right to delete material that may be considered inflammatory. If this occurs, we will
+  leave a note explaining the decision. </p>

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Crime</title>
+  <title>Charm City Blotter</title>
+  <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -19,8 +21,8 @@
     <h2><%= flash[:notice] %>
   </nav>
 </div>
-<div id ="header" class ="center hero-unit">
-<h1>Baltimore Crime</h1>
+<div id ="header">
+<h1>Charm City Blotter</h1>
 </div>
 <%= yield %>
 
