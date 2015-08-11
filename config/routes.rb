@@ -1,3 +1,5 @@
+# Nice management of nested-nested routes.
+
 Rails.application.routes.draw do
   resources :users
     root to: "regions#index"
@@ -6,7 +8,7 @@ Rails.application.routes.draw do
         resources :comments
       end
     end
-  
+
     get '/sign_in', to: 'users#sign_in'
     post '/sign_in', to: 'users#sign_in!'
     get '/sign_up', to: 'users#sign_up'
