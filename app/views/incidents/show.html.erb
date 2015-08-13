@@ -1,4 +1,7 @@
 <h2><%= @incident.title %>
+
+  <!-- Do you have user authorization set up? Noticing you use "admin" below. If so, is there a way for me to test out admin functionality? -->
+
   <% if @incident.user_id==session[:user]["id"] || session[:user]["admin"]%>
   <a href="<%= @incident.id %>/edit">(edit)</a></h2>
   <% end %>

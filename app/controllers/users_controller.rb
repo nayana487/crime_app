@@ -5,6 +5,8 @@ skip_before_action :authenticate
   def sign_up
   end
 
+  # AM: YES. Awesome that you hand-rolled your auth and directed users to the index after sign-up. You'd be surprised how few people are doing that.
+
   def sign_up!
     user = User.new(
       username: params[:username],
